@@ -1,0 +1,227 @@
+/*Navigation*/
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: "Montserrat", serif;
+    font-optical-sizing: auto;
+    font-weight: 450;
+    font-style: normal;
+    --green: #0BC404;
+    --darkgreen: rgb(7, 53, 13);
+}
+
+.nav {
+    background-color: white;
+    padding-left: 25%;
+    padding-right: 25%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 50px;
+    color: var(--darkgreen);
+    font-family: "Dynalight", cursive;
+    font-weight: 400;
+    font-style: normal;
+    box-sizing: border-box;
+}
+
+/*Button de navigation*/
+
+li {
+    list-style: none;
+    display: inline-block;
+    letter-spacing: 0.5px;
+}
+.navbar ul li a {
+    color: black;
+    margin-right: 20px;
+}
+
+.navbar ul li a:hover {
+    border-bottom: solid;
+    color: var(--green);
+}
+
+/*Premiere page*/
+
+.page1 {
+    background-size: cover;
+    background-image:url(../images/page1.png) ;
+    background-position: center;
+    position: relative;
+    background-attachment: fixed;
+    height: 900px;
+}
+
+.page1 * {
+    color: white;
+    margin-left: 5cm;
+    max-width: 40%;
+}
+
+.page1 h2 {
+    font-size: 60px;
+    font-weight: 800;
+    padding-top: 8cm;
+}
+
+.page1 p {
+    font-size: 25px;
+    padding-top: 15px;
+}
+
+.page1 p:hover {
+    font-size: 25px;
+    padding-top: 15px;
+}
+
+.page1 .button a{
+    margin-left: 0;
+    padding-top: 0;
+    font-size: 20px;
+    background-color: var(--green);
+    border: none;
+    position: absolute;
+    margin-top: 10px;
+    padding: 12px;
+    padding-left: 25px;
+    padding-right: 25px;
+    border-radius: 4px;
+}
+
+.page1 .button a:hover{
+    margin-left: 0;
+    padding-top: 0;
+    font-size: 20px;
+    background-color: white;
+    color: var(--darkgreen);
+    border: none;
+    position: absolute;
+    margin-top: 8px;
+    padding: 12px;
+    padding-left: 25px;
+    padding-right: 25px;
+    border-radius: 4px;
+}
+
+
+/*Deuxieme page*/
+
+.page2 {
+    background-size: cover;
+    background-color: rgb(221, 221, 221) ;
+    background-position: center;
+    position: relative;
+    background-attachment: fixed;
+    height: 750px;
+}
+
+.page2 * {
+    color: black;
+    margin-left: 10cm;
+    max-width: 40%;
+}
+
+.page2 p {
+    padding-top: 6cm;
+    font-size: 20;
+    color: var(--darkgreen);
+}
+/*Les cartes contenant des images*/
+
+.card-cont {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 100px;
+}
+
+.card {
+    width: 325px;
+    background-color: antiquewhite;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 20px;
+}
+
+.card img{
+    width: 100%;
+    height: auto;
+}
+
+
+.card-info {
+    padding: 16px;
+}
+
+.card-info h2 {
+    font-size: 25px;
+}
+
+.card-info p {
+    color:grey;
+    font-size: 15px;
+    line-height: 1.3;
+}
+
+/*Fin de page*/
+
+.footer {
+    background-color: var(--darkgreen);
+    padding: 50px 0px;
+}
+
+.footer .media {
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+.footer .media a {
+    font-size: 25px;
+    color: white;
+    margin: 10px;
+}
+
+.footer .media a:hover {
+    font-size: 25px;
+    color: var(--green);
+}
+
+.footer ul {
+    text-align: center;
+}
+
+.footer ul a {
+    color: white;
+    opacity: 1;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.footer ul a:hover {
+    border-bottom: solid;
+    opacity: 1;
+}
+
+.footer ul li {
+    display: inline-block;
+    padding: 0px 15px;
+}
+
+.footer .tag {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 15px;
+    color: rgb(204, 204, 204);
+}

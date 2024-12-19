@@ -1,0 +1,262 @@
+/* Application sur toute la page */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Montserrat", serif;
+    font-optical-sizing: auto;
+    font-weight: 450;
+    font-style: normal;
+    --green: #0BC404;
+    --darkgreen: rgb(7, 53, 13);
+    --darkgreen2: rgb(50, 126, 0);
+}
+
+span {
+    border-bottom: solid 2px var(--green);
+    color: var(--green);
+}
+
+span:hover {
+    border-bottom: solid 2px var(--darkgreen2);
+    color: var(--darkgreen2);
+    transition: background-color 0.3s, color 0.3s, border 0.3s;
+}
+
+/* Navigation */
+
+.nav {
+    background-color: white;
+    padding: 15px 5%;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 50px;
+    color: var(--darkgreen);
+    font-family: "Dynalight", cursive;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+}
+
+.navbar ul li {
+    margin-left: 20px;
+}
+
+.navbar ul li a {
+    color: black;
+    letter-spacing: 0.5px;
+}
+
+.navbar ul li a:hover {
+    border-bottom: solid 2px var(--green);
+    color: var(--green);
+    transition: background-color 0.3s, color 0.3s, border 0.3s;
+}
+
+/*Premiere page*/
+
+.page1 {
+    background-size: cover;
+    background-image:url(../images/desserts.jpg) ;
+    background-position: center;
+    position: relative;
+    background-attachment: fixed;
+    height: 500px;
+}
+
+.page1 * {
+    color: white;
+    margin-left: 10%; 
+    max-width: 90%; 
+}
+
+.page1 h2 {
+    font-size: 60px;
+    font-weight: 800;
+    padding-top: 2.5cm;
+}
+
+.page1 p {
+    font-size: 25px;
+    padding-top: 15px;
+    max-width: 60%;
+}
+
+/*Deuxième page*/
+
+.page2 {
+    background-size: cover; ;
+    background-position: center;
+    position: relative;
+    background-attachment: fixed;
+    height: 500px;
+}
+
+.page2 * {
+    margin-left: 10%; 
+    max-width: 90%;
+}
+
+.page2 h2 {
+    font-size: 50px;
+    font-weight: 800;
+    padding-top: 1cm;
+    color: var(--darkgreen);
+}
+
+.page2 img {
+    margin-top: 20px;
+    margin-bottom: 0px;
+    width: 5cm;
+    height: 5cm;
+}
+.page2 p {
+    font-size: 25px;
+    padding-top: 15px;
+}
+
+.page2 .content {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+/* Fin de page (footer) */
+
+.footer {
+    background-color: var(--darkgreen);
+    padding: 50px 0;
+    text-align: center;
+}
+
+.footer .media a {
+    font-size: 1.5rem;
+    color: white;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.footer .media a:hover {
+    color: var(--green);
+}
+
+.footer ul {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.footer ul li {
+    display: inline-block;
+    margin: 0 15px;
+    margin-bottom: 20px;
+}
+
+.footer ul a {
+    color: white;
+    transition: border-bottom 0.3s;
+}
+
+.footer ul a:hover {
+    border-bottom: solid 2px var(--green);
+}
+
+.footer a i:hover {
+    border-bottom: solid 2px var(--green);
+}
+
+.footer .tag {
+    margin-top: 30px;
+    font-size: 0.9rem;
+    color: rgb(204, 204, 204);
+}
+
+/* Page responsive pour autres appareils */
+@media (max-width: 768px) {
+    .nav {
+        padding: 10px 10%;
+    }
+    .page1 h2 {
+        font-size: 40px;
+        padding-top: 4cm;
+    }
+    .page1 p {
+        font-size: 18px;
+    }
+    .page1 * {
+        margin-left: 5%;
+        max-width: 90%;
+    }
+
+    .card {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .nav {
+        flex-direction: column; 
+        align-items: center;
+    }
+    .logo {
+        font-size: 40px;
+    }
+    .page1 h2 {
+        font-size: 30px;
+        padding-top: 2cm;
+    }
+    .card {
+        width: 90%;
+    }
+    .page2 .content {
+        font-size: 13px;
+    }
+    .page2 h2 {
+        font-size: 35px;
+    }
+}
+
+@media (max-width: 410px) {
+    .navbar {
+        flex-wrap: wrap; 
+        justify-content: center; 
+        text-align: center;
+    }
+
+    .logo {
+        font-size: 28px; 
+        margin-bottom: 5px; 
+        margin-top: 5px;
+    }
+
+    .navbar ul {
+        flex-wrap: wrap; 
+        gap: 10px; 
+    }
+
+    .navbar ul li {
+        margin: 0 10px; 
+    }
+
+    .navbar ul li a {
+        font-size: 0.9rem; 
+    }
+}
+
+@media (max-width: 350px) {
+    .logo {
+        font-size: 20px;
+    }
+    .page2 * {
+        margin-left: 20px;
+    }
+}

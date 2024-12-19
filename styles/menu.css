@@ -1,0 +1,296 @@
+/* Application sur toute la page */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    text-decoration: none;
+    font-family: "Montserrat", serif;
+    font-optical-sizing: auto;
+    font-weight: 450;
+    font-style: normal;
+    --green: #0BC404;
+    --darkgreen: rgb(7, 53, 13);
+    --darkgreen2: rgb(50, 126, 0);
+}
+
+span {
+    border-bottom: solid 2px var(--green);
+    color: var(--green);
+}
+
+span:hover {
+    border-bottom: solid 2px var(--darkgreen2);
+    color: var(--darkgreen2);
+    transition: background-color 0.3s, color 0.3s, border 0.3s;
+}
+
+/* Navigation */
+
+.nav {
+    background-color: white;
+    padding: 15px 5%;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 50px;
+    color: var(--darkgreen);
+    font-family: "Dynalight", cursive;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+}
+
+.navbar ul li {
+    margin-left: 20px;
+}
+
+.navbar ul li a {
+    color: black;
+    letter-spacing: 0.5px;
+}
+
+.navbar ul li a:hover {
+    border-bottom: solid 2px var(--green);
+    color: var(--green);
+    transition: background-color 0.3s, color 0.3s, border 0.3s;
+}
+
+
+
+.page1 {
+    background-size: cover;
+    background-image:url(../images/4.jpg) ;
+    background-position: center;
+    position: relative;
+    background-attachment: fixed;
+    height: 400px;
+}
+
+.page1 * {
+    color: white;
+    margin-left: 10%; 
+    max-width: 90%; 
+}
+
+.page1 h2 {
+    font-size: 60px;
+    font-weight: 800;
+    padding-top: 2.5cm;
+}
+
+.page1 p {
+    font-size: 25px;
+    padding-top: 15px;
+}
+
+/*Les cartes contenant des images*/
+.card-cont {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding-top: 0px;
+    margin: 20px;
+}
+
+/* La carte */
+.flip-card {
+    width: 300px;
+    height: 300px;
+    perspective: 1000px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease-in-out;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Les deux faces */
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; 
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    text-align: center;
+}
+
+/* L'avant de la carte */
+.flip-card-front {
+    background-color: #e3ffe2;
+    color: #333333;
+}
+
+.flip-card-front img {
+    width: 100%;
+    height: 75%;
+    object-fit: cover;
+}
+
+.flip-card-front h2 {
+    margin: 20px 0;
+    font-size: 1.5rem;
+}
+
+/* L'arriere de la carte */
+.flip-card-back {
+    background-color: #0BC404; 
+    color: white;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.flip-card-back h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.flip-card-back p {
+    font-size: 1rem;
+    line-height: 1.5;
+    padding: 0 10px;
+}
+
+/*Fin de page*/
+
+.footer {
+    background-color: var(--darkgreen);
+    padding: 50px 0;
+    text-align: center;
+}
+
+.footer .media a {
+    font-size: 1.5rem;
+    color: white;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.footer .media a:hover {
+    color: var(--green);
+}
+
+.footer ul {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.footer ul li {
+    display: inline-block;
+    margin: 0 15px;
+    margin-bottom: 20px;
+}
+
+.footer ul a {
+    color: white;
+    transition: border-bottom 0.3s;
+}
+
+.footer ul a:hover {
+    border-bottom: solid 2px var(--green);
+}
+
+.footer a i:hover {
+    border-bottom: solid 2px var(--green);
+}
+
+.footer .tag {
+    margin-top: 30px;
+    font-size: 0.9rem;
+    color: rgb(204, 204, 204);
+}
+
+/* Page responsive pour autres appareils */
+
+@media (max-width: 768px) {
+    .nav {
+        padding: 10px 10%; 
+    }
+    .page1 h2 {
+        font-size: 40px; 
+        padding-top: 4cm;
+    }
+    .page1 p {
+        font-size: 18px;
+    }
+    .page1 * {
+        margin-left: 5%;
+        max-width: 90%;
+    }
+
+    .card {
+        width: calc(50% - 20px); 
+    }
+}
+
+@media (max-width: 480px) {
+    .nav {
+        flex-direction: column; 
+        align-items: center;
+    }
+    .logo {
+        font-size: 40px; 
+    }
+    .page1 h2 {
+        font-size: 30px;
+        padding-top: 2cm;
+    }
+    .card {
+        width: 90%; 
+    }
+}
+
+@media (max-width: 410px) {
+    .navbar {
+        flex-wrap: wrap; 
+        justify-content: center;
+        text-align: center;
+    }
+
+    .logo {
+        font-size: 28px; 
+        margin-bottom: 5px; 
+        margin-top: 5px;
+    }
+
+    .navbar ul {
+        flex-wrap: wrap; 
+        gap: 10px; 
+    }
+
+    .navbar ul li {
+        margin: 0 10px; 
+    }
+
+    .navbar ul li a {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 350px) {
+    .logo {
+        font-size: 20px;
+    }
+}
